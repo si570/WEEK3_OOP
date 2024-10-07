@@ -21,5 +21,21 @@ public class BasicCalcu {
             System.out.println("Warning: Cannot divide by zero.");
             System.exit(0);
         }
+
+        // Get result based on the operation
+        double result = switch (operation) {
+            case "add" -> add(num1, num2);
+            default -> 0;
+        };
+        // Print the result only if it's valid
+        if (result != 0) {
+            System.out.println("The result is: " + result);
+        }
+
+    }
+
+    // Updated methods to return the result
+    public static double add(double num1, double num2) {
+        return num1 + num2; // Return the result
     }
 }
